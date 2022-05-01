@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Piso : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   public void PersonajePrincipal()
     {
-        
+        PersonajePrincipal personajePrincipal = new PersonajePrincipal();
     }
-
-    // Update is called once per frame
-    void Update()
+   public void  Enemigo()
     {
-        
+        Enemigo enemigo = new Enemigo();
+    }
+    public void Obstaculo()
+    {
+        Obstaculo obstaculo = new Obstaculo();
     }
 }

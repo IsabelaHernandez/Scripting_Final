@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorreEnemigo : MonoBehaviour
+public class TorreEnemigo : Torre
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Random randi = new Random();
 
-    // Update is called once per frame
-    void Update()
+    public Torreenemigo()
     {
-        
+        CrearTorre(TorreSize);
     }
 }

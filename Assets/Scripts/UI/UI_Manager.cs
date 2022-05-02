@@ -11,11 +11,10 @@ public class UI_Manager : MonoBehaviour
     {
         playerLogic = FindObjectOfType<PlayerLogic>();
     }
-
-    // Update is called once per frame
+        
     void Update()
     {
-        if (playerLogic.playerStats.GetHealth() <= 0)
+        if (playerLogic.playerStats.GetHealth() <= 0) //cuando la vida llega a cero se activa la pantalla de Game Over
         {
             GameOverScreen.SetActive(true);
         }

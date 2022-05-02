@@ -17,9 +17,11 @@ public class PlayerLogic : MonoBehaviour
     private void Update()
     {
         currentHealth = playerStats.GetHealth();
+        playerStats.HealthText.text = currentHealth.ToString();
         if (currentHealth <= 0)
         {
             Debug.Log("Game Over");
+            Destroy(gameObject);
         }
     }
 
@@ -27,7 +29,7 @@ public class PlayerLogic : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            EnemyLogic enemyLogic = collision.GetComponent<EnemyLogic>();
+            EnemyLogic enemyLogic = collision.GetComponentInParent<EnemyLogic>();
             int enemyHealth = enemyLogic.enemyStats.GetHealth();
 
             if (enemyHealth < currentHealth)

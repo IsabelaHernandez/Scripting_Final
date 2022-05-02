@@ -18,6 +18,7 @@ public class EnemyLogic : MonoBehaviour
     private void Update()
     {
         health = enemyStats.GetHealth();
-        if (health <= 0) { Destroy(transform.parent.gameObject); }
+        enemyStats.HealthText.text = health.ToString();
+        if (health <= 0) { Destroy(gameObject); }
     }
 }

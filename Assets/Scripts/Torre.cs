@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Torre : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Piso> torre = new List<Piso>();
+    int torreSize;
+    Random randi = new Random();
+    
+    public Torre()
     {
-        
+        torreSize = randi.Next(1, 7);
+
+        CrearTorre(torreSize);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CrearTorre(int size)
     {
-        
+        for (int i = 0; i < size; i++)
+        {
+            torre.Add(new Piso());
+        }
     }
 }

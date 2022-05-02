@@ -16,6 +16,6 @@ public class InGameObject
     public void RecieveDamage(int damageValue)
     {
         currentHealth -= damageValue;
-        currentHealth = Mathf.Clamp(currentHealth, 0, 1000);
+        currentHealth = Mathf.Clamp(currentHealth, 0, 100000);
     }
 }

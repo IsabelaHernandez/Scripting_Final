@@ -18,11 +18,7 @@ public class PlayerLogic : MonoBehaviour
     {
         currentHealth = playerStats.GetHealth();
         playerStats.HealthText.text = currentHealth.ToString();
-        if (currentHealth <= 0)
-        {
-            Debug.Log("Game Over");
-            Destroy(gameObject);
-        }
+        if (currentHealth <= 0) { Destroy(gameObject); }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

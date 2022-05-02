@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 MousePosition()
     {
-        var mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition); mousePosition.z = 0;
+        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition); mousePosition.z = 0;
         return mousePosition;
     }
 
